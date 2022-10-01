@@ -1,8 +1,7 @@
-import { observer } from "mobx-react-lite";
 import React, { useEffect, useState } from "react";
 import { Button, Modal, Form, Spinner } from "react-bootstrap";
 
-const TaskEdit = observer((props)=>{
+const TaskEdit = (props)=>{
     const [cats, setCats] = useState([])
     const [loading, setLoading] = useState(true);
     let name = props.task, cat = cats.indexOf(props.cat);
@@ -75,6 +74,6 @@ const TaskEdit = observer((props)=>{
             </Modal.Footer>
       </Modal>
     )
-})
+}
 
 export default TaskEdit;

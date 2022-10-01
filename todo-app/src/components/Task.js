@@ -1,12 +1,11 @@
-import { observer } from "mobx-react-lite";
 import React, { useEffect, useState } from "react";
-import { Accordion, Button, Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import TaskEdit from "./TaskEdit";
 
 
-const Task= observer((props)=>{
+const Task= (props)=>{
     const [checked, setChecked] =useState(false)
-    const [redact, setRedact] = useState(false)
+    //const [redact, setRedact] = useState(false)
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -41,6 +40,6 @@ const Task= observer((props)=>{
             </div>
         </div>
     )
-})
+}
 
 export default Task;

@@ -1,13 +1,12 @@
-import { observer } from "mobx-react-lite";
 import React, { useState } from "react";
 import {Navbar, Button} from 'react-bootstrap';
 import CategoryCreation from "./CategoryCreation";
 import TaskCreation from "./TaskCreation";
 
-const Topbar = observer(() =>{
+const Topbar = () =>{
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    //const handleShow = () => setShow(true);
 
     function Modals(){
         if(show === 1) return <CategoryCreation handleClose={handleClose}/>
@@ -27,6 +26,6 @@ const Topbar = observer(() =>{
         </Navbar>
         </div>
     )
-})
+}
 
 export default Topbar;

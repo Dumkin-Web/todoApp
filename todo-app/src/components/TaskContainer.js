@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Form, Spinner } from "react-bootstrap";
 import Category from "./Category";
-import {observer} from 'mobx-react-lite'
 
 function clonning(obj){
     let temp = {}
@@ -14,7 +13,7 @@ function clonning(obj){
     return temp;
 }
 
-const TaskContainer = observer(() =>{
+const TaskContainer = () =>{
     const [tasks, setTasks] = useState({"any":{},"allTasks":[]})
     const [loading, setLoading] = useState(true);
     const [searching, setSearching] = useState("")
@@ -60,6 +59,6 @@ const TaskContainer = observer(() =>{
             </div>
         </Container>
     )
-})
+}
 
 export default TaskContainer;

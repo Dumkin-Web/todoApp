@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  server:
+    build: 
+      context: ./server
+    ports:
+      - 3006:3006
+    restart: always
+  client:
+    build: 
+      context: ./todo-app
+    ports:
+      - 3001:3000
+    depends_on:
+      - server
+    restart: always
